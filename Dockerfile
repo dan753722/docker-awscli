@@ -11,4 +11,4 @@ WORKDIR /aws
 
 RUN rc-update add docker boot
 
-ENTRYPOINT ["aws"]
+CMD ["aws"]
