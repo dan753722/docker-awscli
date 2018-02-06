@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker:latest
 
 RUN \
 	mkdir -p /aws && \
@@ -6,9 +6,3 @@ RUN \
 	pip install awscli && \
 	apk --purge -v del py-pip && \
 	rm /var/cache/apk/*
-
-WORKDIR /aws
-
-RUN rc-update add docker boot
-
-CMD ["aws"]
