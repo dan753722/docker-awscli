@@ -7,3 +7,5 @@ RUN \
 	apk --purge -v del py-pip && \
 	rm /var/cache/apk/*
 
+RUN npm install -g serverless@1.26.1
+
